@@ -447,23 +447,26 @@
     }
 
     /* Mobile nav drawer */
-    .mobile-nav-drawer {
-      display: none;
-      position: fixed;
-      top: 76px;
-      left: 0;
-      right: 0;
-      background: rgba(6, 16, 31, 0.98);
-      backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(124, 58, 237, 0.2);
-      z-index: 998;
-      padding: 24px;
-      flex-direction: column;
-      gap: 16px;
-      transform: translateY(-20px);
-      opacity: 0;
-      transition: all .3s ease
-    }
+.mobile-nav-drawer {
+    display: none;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: rgba(6, 16, 31, 0.98);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    z-index: 998;
+    padding: 27px;
+    height: 701px;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+
 
     .mobile-nav-drawer.open {
       display: flex;
@@ -2789,6 +2792,7 @@
       <div class="nav-logo-text">Advanced Business Suite<span>Powered by FinancialCorp</span></div>
     </div>
     <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#showcase">Showcase</a></li>
@@ -2804,12 +2808,13 @@
 
   <!-- MOBILE NAV DRAWER -->
   <nav class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="#hero" onclick="closeMobileMenu()">home</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
     <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
     <a href="#showcase" onclick="closeMobileMenu()">Showcase</a>
     <a href="#why" onclick="closeMobileMenu()">Why Us</a>
     <a href="#process" onclick="closeMobileMenu()">Process</a>
-    <a href="#testimonials" onclick="Reviews">Reviews</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
     <a href="#about" onclick="closeMobileMenu()">About</a>
     <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Get Started Today</a>
   </nav>
